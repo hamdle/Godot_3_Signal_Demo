@@ -3,7 +3,7 @@ extends Sprite
 signal meow
 
 func _ready():
-	var ButtonNode = get_node("/root/Node/MyButton")
+	var ButtonNode = get_tree().get_root().get_node("Node/MyButton")
 	self.connect("meow", ButtonNode, "_on_Meow", [])
 	
 func move_me():
